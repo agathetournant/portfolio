@@ -134,6 +134,23 @@ h2 {
   height: 140px;
 }
 
+.project-card__thumb--podcast {
+  background: linear-gradient(135deg, #ff4e4e 0%, #a00000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card__thumb--podcast::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 18px 0 18px 32px;
+  border-color: transparent transparent transparent rgba(255,255,255,0.85);
+  margin-left: 6px;
+}
+
 .project-card__thumb--thesis {
   background: linear-gradient(135deg, #6c63ff 0%, #3a3480 100%);
 }

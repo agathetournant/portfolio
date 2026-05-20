@@ -7,7 +7,7 @@
 }
 
 :root {
-  --color-bg:      #402E2A;
+  --color-bg:      #2E1E1B;
   --color-surface: #553840;
   --color-border:  rgba(206, 160, 174, 0.18);
   --color-accent:  #9CD08F;
@@ -98,10 +98,11 @@ h2 {
 
 /* Hero */
 #hero {
-  min-height: 60vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 2rem;
 }
 
 #hero h1 {
@@ -122,6 +123,25 @@ h2 {
 
 .highlight {
   color: var(--color-accent);
+}
+
+/* Outline button (used in About section) */
+.btn-outline {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.55rem 1.25rem;
+  border: 1.5px solid var(--color-accent);
+  color: var(--color-accent);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
 }
 
 /* Projects */
@@ -153,28 +173,15 @@ h2 {
 }
 
 .project-card__thumb--podcast {
-  background: linear-gradient(135deg, #9b5f6e 0%, #402E2A 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.project-card__thumb--podcast::after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 18px 0 18px 32px;
-  border-color: transparent transparent transparent rgba(213,176,172,0.85);
-  margin-left: 6px;
+  background: url('../data/podcast_image.png') center / cover no-repeat;
 }
 
 .project-card__thumb--thesis {
-  background: linear-gradient(135deg, #CEA0AE 0%, #684551 100%);
+  background: url('../data/master_thesis_image.png') center / cover no-repeat;
 }
 
 .project-card__thumb--asd {
-  background: linear-gradient(135deg, #9CD08F 0%, #4a7a45 100%);
+  background: url('../data/asd_project_thumbnail.svg') center / cover no-repeat;
 }
 
 .project-card__body {
@@ -302,8 +309,30 @@ h2 {
 }
 
 /* Contact */
-#contact a {
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-link:hover {
   color: var(--color-accent);
+}
+
+.contact-link svg {
+  flex-shrink: 0;
+  opacity: 0.8;
 }
 
 /* Footer */
